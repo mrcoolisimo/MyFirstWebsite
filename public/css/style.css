@@ -1,4 +1,297 @@
-body{
-    background: #333;
-    color: #fff;
+body
+{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/*Global*/
+.container
+{
+    width:80%;
+    /*Centers content*/
+    margin:auto;
+    /*I'm not really sure what this does, but it keeps everything neat*/
+    overflow:hidden;
+}
+
+ul
+{
+    margin:0;
+    padding:0;
+}
+
+.button_1
+{
+    height:38px;
+    background:#0e7fac;
+    border:0;
+    padding-left:20;
+    padding-right:20;
+    color: #ffffff;
+}
+
+.button_2
+{
+
+    background:#0e7fac;
+    border:0;
+    padding-left:20;
+    padding-right:20;
+    color: #ffffff;
+    text-align:center;
+    margin:auto;
+}
+
+.dark
+{
+    padding:15px;
+    background:#35424a;
+    color:#ffffff;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+/*Menu Bar*/
+.bar
+  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+ .navi
+ {
+    float:left; 
+ }
+
+ .navi a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+ }
+
+.navi a:hover:not(.active) {
+    background-color: #111;
+  }
+
+.active {
+    background-color: #0e7fac;
+    }
+
+/*Header*/
+header
+{
+    background:#35424a;
+    color:#ffffff;
+    padding-top:30px;
+    min-height:70px;
+    border-bottom:#0e7fac 3px solid;
+}
+
+header a
+{
+    color:#ffffff;
+    /*Removes hyperlink underlines*/
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:16px;
+}
+
+header li
+{
+    /*Pushes menu items to the left*/
+    float:left;
+    /*Removes those pesky bullet points*/
+    display:inline;
+    /*TOP RIGHT BOTTOM LEFT*/
+    padding:0 20px 0 20px
+}
+
+header #branding
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header #branding h1
+{
+    margin:0;
+}
+
+header nav
+{
+    /*Moves the menu items to the right, so that the menu items can share the line*/
+    float:right;
+    margin-top:10px;
+}
+
+header .highlight, header .current a
+{
+    color:#15b3f1;
+    font-weight:bold;
+}
+
+header a:hover
+{
+    color:#cccccc;
+    font-weight:bold;
+}
+
+/*Showcase*/
+#showcase
+{
+    min-height:400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), no-repeat url('../images/engineer.jpg');
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    color:#ffffff
+}
+
+#showcase h1
+{
+    margin-top:100px;
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+#showcase p
+{
+    font-size:20px;
+}
+
+/*Newsletter*/
+#newsletter
+{
+    padding:15px;
+    color:white;
+    background:#35424a;
+}
+
+#newsletter h1
+{
+    float:left;
+}
+
+#newsletter form
+{
+    float:right;
+    margin-top:15px;
+}
+
+#newsletter input[type="email"]
+{
+    padding:4px;
+    height:25px;
+    width:250px;
+}
+
+/*boxes*/
+#boxes
+{
+    margin-top:20px;
+}
+
+#boxes .box
+{
+    float:left;
+    text-align:center;
+    width:30%;
+    padding:10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#boxes .box img
+{
+    width:120px;
+}
+
+#boxes h3
+{
+    font-size:30px;
+}
+
+#boxes p
+{
+    font-size:18px;
+}
+
+aside#sidebar
+{
+    float:right;
+    width:30%;
+    margin-top:10px;
+}
+
+article#main-col
+{
+    float:left;
+    width:65%;
+}
+
+/*Services*/
+ul#services li
+{
+    list-style: none;
+    padding:20px;
+    border: #cccccc solid 1px;
+    margin-bottom:5px;
+    background:#e6e6e6;
+}
+
+
+footer
+{
+    padding:20px;
+    margin-top:20px;
+    color:#ffffff;
+    background-color:#0e7fac;
+    text-align:center;
+}
+
+/*Media Queries*/
+@media(max-width:768px)
+{
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar
+    {
+        float:none;
+        text-align:center;
+        width:100%;
+    }
+
+    header
+    {
+        padding-bottom:20px;
+    }
+
+    #showcase h1
+    {
+        margin-top:40px;
+    }
+
+    #newsletter button, .quote button
+    {
+        display:block;
+        width:100%;
+    }
+
+    #newsletter form input[type:"email"], .quote input, .quote textarea
+    {
+        width: 100%:margin-bottom;
+        margin-bottom:5px;
+    }
 }
